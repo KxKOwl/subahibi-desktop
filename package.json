@@ -1,0 +1,17 @@
+{
+  "name": "subahibi-desktop",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "《美好的每一天～不连续存在～》主题桌面页",
+  "scripts": {
+    "check": "tsc -p tsconfig.json --noEmit",
+    "build": "npm run check && esbuild src/main.ts --format=esm --outfile=src/main.js --target=es2020",
+    "watch": "esbuild src/main.ts --format=esm --outfile=src/main.js --target=es2020 --watch",
+    "serve": "python3 -m http.server 8000"
+  },
+  "devDependencies": {
+    "esbuild": "^0.23.1",
+    "typescript": "^5.5.4"
+  }
+}
