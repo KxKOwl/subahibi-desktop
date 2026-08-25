@@ -1,1 +1,14 @@
+# 依赖
 node_modules/
+
+# 构建产物（统一输出到 dist/）
+dist/
+
+# 已迁移到 dist/ 的旧产物路径
+src/main.js
+css/main.css
+
+# 本地缓存 / 日志 / 编辑器
+*.log
+*.tsbuildinfo
+.DS_Store
