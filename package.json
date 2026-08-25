@@ -7,8 +7,8 @@
   "scripts": {
     "check": "tsc -p tsconfig.json --noEmit",
     "styles": "sass css/main.scss dist/main.css",
-    "build": "npm run check && npm run styles && esbuild src/main.ts --format=esm --outfile=dist/main.js --target=es2020",
-    "watch": "esbuild src/main.ts --format=esm --outfile=dist/main.js --target=es2020 --watch",
+    "build": "npm run check && npm run styles && esbuild src/main.ts --bundle --format=esm --outfile=dist/main.js --target=es2020",
+    "watch": "esbuild src/main.ts --bundle --format=esm --outfile=dist/main.js --target=es2020 --watch",
     "watch:styles": "sass --watch css/main.scss:dist/main.css",
     "serve": "python3 -m http.server 8080"
   },

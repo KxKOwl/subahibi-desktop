@@ -7,7 +7,14 @@
 ```tree
 index.html                主页面（加载 ./dist/main.js 与 ./dist/main.css）
 src/
-  main.ts                 TypeScript 源码（页面全部交互逻辑）
+  main.ts                 入口：初始化各管理器、全局快捷键
+  utils.ts                公共工具（DOM 查询、格式化、存储、Canvas）
+  AudioPlayer.ts          音频播放器（播放列表、音量、频谱）
+  ClockManager.ts         时间 / 世界时钟 / 日历 / 倒计时
+  DesktopEffects.ts       数字雨、信号条、日志、网络波、魔方
+  MessageBoard.ts         留言板
+  ThemeManager.ts         深色 / 晴日主题切换
+  WindowManager.ts        窗口聚焦 / 拖动 / 编辑 / 布局持久化
 dist/                     构建产物（gitignore，不提交）
 css/
   main.scss               SCSS 源码（页面样式）
@@ -54,6 +61,3 @@ npm run serve   # 本地预览 http://localhost:8000/
 
 首次部署前，在仓库 **Settings → Pages** 中将 Source 设置为 **GitHub Actions**，
 之后每次 push 到 `main` 都会自动更新。
-
-> 注：原 v2 页面把图片和音乐以 base64 硬编码在 HTML 里（19MB），本仓库已将其
-> 提取为独立文件（HTML 仅 62KB），方便版本管理和协作修改。
